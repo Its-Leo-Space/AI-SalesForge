@@ -193,14 +193,4 @@ python scripts/lead_scorer.py
 
 ---
 
-## 📝 License
-
-[Add your license information here]
-
-## 👤 Author
-
-Created by [Your Name/Organization]
-
----
-
 **AI-SalesForge** — Your enterprise-grade, psychology-driven sales acceleration engine.
