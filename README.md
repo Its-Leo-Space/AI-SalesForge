@@ -1,3 +1,13 @@
+<p align="center">
+  <img src="banner.svg" alt="AI Sales Forge — Claude Code Skills" width="100%">
+</p>
+
+<p align="center">
+  <a href="#quick-start"><img src="https://img.shields.io/badge/install-one--liner-blue?style=for-the-badge" alt="Install"></a>
+  <a href="#commands"><img src="https://img.shields.io/badge/14_skills-ready-8b5cf6?style=for-the-badge" alt="14 Skills"></a>
+  <a href="#how-it-works"><img src="https://img.shields.io/badge/5_parallel-agents-22c55e?style=for-the-badge" alt="5 Agents"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-gray?style=for-the-badge" alt="MIT License"></a>
+</p>
 
 > **A full AI-powered sales system running inside Claude Code.**
 > Research any company, score leads with BANT + MEDDIC, map buying committees, generate personalized outreach, handle objections with FBI negotiation tactics, prepare for meetings, and produce professional PDF pipeline reports — all from the command line.
@@ -591,3 +601,10 @@ curl -fsSL https://raw.githubusercontent.com/Its-Leo-Space/AI-SalesForge/main/un
 Removes all skills, agents, scripts, and templates from `~/.claude/`. Python packages are not removed.
 
 ---
+
+<p align="center">
+  <strong>MIT License</strong> · <a href="https://github.com/Its-Leo-Space">Its-Leo-Space</a>
+  <br><br>
+  <a href="https://github.com/Its-Leo-Space/AI-SalesForge/issues">Report Bug</a> ·
+  <a href="https://github.com/Its-Leo-Space/AI-SalesForge/issues">Request Feature</a>
+</p>
