@@ -1,11 +1,7 @@
 # AI-SalesForge
-A full-suite AI Sales Agents that handle your entire pipeline, combining auto prospecting, personalized email outreach, and psy-ops sales objection handling. Equipped with specialized subagents and advanced skills, scripts and workflows with dynamic hand-on agent interactions and context awareness for the entire funnel. 
+AI-SalesForge is a full-suite, enterprise-grade Multi-Agent Sales Engine built inside Claude Code. It autonomously drives your entire B2B revenue pipeline—from raw intent signals and domain URLs to personalized outreach, structured lead scoring, and playbook-aligned meeting frameworks—entirely from the command line.
 
-# AI Sales Forge 🛠️💼
-
-An advanced, enterprise-grade Multi-Agent Sales Engine running inside Claude Code. Optimized to dynamically orchestrate 5 specialized parallel agents alongside deterministic data quality gates and psychological objection defusal frameworks. 
-
-AI Sales Forge transforms raw intent signals and domain URLs into deeply contextualized, high-conversion B2B outreach, structured qualifying scoring, and playbook-aligned meeting frameworks—entirely driving your enterprise revenue pipeline from the command line.
+Powered by 5 dynamically orchestrated parallel agents, it combines automated prospecting, hyper-personalized email outreach, and psychological objection-handling frameworks. Specialized subagents operate with deep context awareness and real-time agent interactions across every stage of the funnel, supported by deterministic data quality gates to protect pipeline integrity from first signal
 
 ---
 
