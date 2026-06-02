@@ -68,6 +68,21 @@ Phase 3: Synthesizing results...
  💾 Output Saved: PROSPECT-ANALYSIS.md
 ```
 
+### 🛠️ Complete CLI Command Mapping
+
+| Command | Description | Output Artifact |
+|---------|-------------|-----------------|
+| `/sales prospect <url>` | Full 360° account audit launching 5 parallel agents. | `PROSPECT-ANALYSIS.md` |
+| `/sales quick <url>` | Fast 60-second firmographic & visibility snapshot. | Terminal Output |
+| `/sales research <url>` | Deep-dive web company research & metadata extraction. | `COMPANY-RESEARCH.md` |
+| `/sales qualify <url>` | Two-pass BANT + MEDDIC scoring optimization. | `LEAD-QUALIFICATION.md` |
+| `/sales contacts <url>` | Maps decision-makers, buying roles, and contact gaps. | `DECISION-MAKERS.md` |
+| `/sales outreach <name>` | Multi-step hyper-personalized messaging sequences. | `OUTREACH-SEQUENCE.md` |
+| `/sales followup <name>` | Context-locked follow-ups synced to previous touchpoints. | `FOLLOWUP-SEQUENCE.md` |
+| `/sales prep <url>` | Meeting briefing document with embedded script tactics. | `MEETING-PREP.md` |
+| `/sales proposal <client>` | Comprehensive, ROI-benchmarked closing agreements. | `PROPOSAL-DOCUMENT.md` |
+| `/sales report` | Scans `OUTREACH-LOG.md` to spit out dynamic pipeline health. | Terminal + PDF Option |
+
 ---
 
 ## 📁 Repository Structure
@@ -129,12 +144,52 @@ Phase 3: Synthesizing results...
 
 ---
 
+## ⚡ Quick Start & Installation
+
+### 1. Provision Locally
+
+Clone the repository to your local runtime environment:
+
+```bash
+git clone https://github.com/Its-Leo-Space/ai-sales-forge.git
+cd ai-sales-forge
+```
+
+### 2. Run the Environment Installer
+
+Execute the setup wrapper to build project tracking directories and extract necessary dependencies:
+
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+### 3. Initialize Variables
+
+Populate your newly generated local `.env` configuration file:
+
+```plaintext
+CLAUDE_API_KEY=your_key_here
+SERPER_API_KEY=your_key_here
+```
+
+### 4. Run Pre-Flight Diagnostics
+
+Ensure your two-pass scoring layers and file tracking systems are perfectly calibrated before live deployment:
+
+```bash
+python scripts/lead_scorer.py
+```
+
+---
+
 ## 🔧 Getting Started
 
-1. Clone this repository
+1. Complete the Quick Start & Installation steps above
 2. Configure your sales ICP and market context in `templates/`
 3. Load the specialized sales agents into Claude Code
 4. Use `/sales prospect [URL]` to begin autonomous pipeline analysis
+5. Review generated analysis artifacts in your project directory
 
 ---
 
