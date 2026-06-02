@@ -76,3 +76,51 @@ Phase 3: Synthesizing results...
 | `/sales prep <url>` | Meeting briefing document with embedded tactical scripts. | `MEETING-PREP.md` |
 | `/sales proposal <client>` | Comprehensive, ROI-benchmarked closing agreements. | `PROPOSAL-DOCUMENT.md` |
 | `/sales report` | Scans OUTREACH-LOG.md to spit out dynamic pipeline health. | Terminal + PDF Option |
+
+├── agents/
+│   ├── sales-strategy.md       # Swarm Orchestrator & Data Quality Gate
+│   ├── sales-competitive.md    # Continuous Threat Matrix Loop
+│   ├── sales-company.md        # Firmographic Processing Core
+│   ├── sales-contacts.md       # Identity & Target Committee Mapper
+│   └── sales-opportunity.md    # Dynamic Intent Pipeline Agent
+├── skills/
+│   ├── sales-objections/      # LQS, MIC, AAR, FCA Psychological Engines
+│   ├── sales-icp/             # Automated Analytics & Profile Diff Engine
+│   ├── sales-prep/            # Playbook-Synced Briefing Generation
+│   ├── sales-followup/        # Context-Locked Nurture Automation
+│   └── [Other Skills]         # Core handlers (Prospect, Research, Qualify, etc.)
+├── templates/
+│   ├── COMPETITIVE-LIBRARY.md  # Long-term marketplace intelligence tracking
+│   ├── OUTREACH-LOG.md         # Validated outreach state registry
+│   ├── ROI-BENCHMARKS.md       # Economic justification milestones
+│   ├── MARKET-CONTEXT.md       # Regional tool behavior & cultural overrides
+│   └── OBJECTION-PLAYBOOK.md   # Script injection mapping asset
+└── scripts/
+    ├── lead_scorer.py         # Two-Pass Math Scoring Script
+    ├── contact_finder.py      # Verification Mining Protocol
+    └── generate_pdf_report.py # Automated Report Compilation Script
+
+⚡ Quick Start & Installation
+1. Provision Locally
+Clone the repository to your local runtime environment:
+
+Bash
+git clone [https://github.com/Its-Leo-Space/ai-sales-forge.git](https://github.com/Its-Leo-Space/ai-sales-forge.git)
+cd ai-sales-forge
+2. Run the Environment Installer
+Execute the setup wrapper to build project tracking directories and extract necessary dependencies:
+
+Bash
+chmod +x install.sh
+./install.sh
+3. Initialize Variables
+Populate your newly generated local .env configuration file:
+
+Plaintext
+CLAUDE_API_KEY=your_key_here
+SERPER_API_KEY=your_key_here
+4. Run Pre-Flight Diagnostics
+Ensure your two-pass scoring layers and file tracking systems are perfectly calibrated before live deployment:
+
+Bash
+python scripts/lead_scorer.py
