@@ -1,36 +1,44 @@
 # AI-SalesForge
-AI-SalesForge is a full-suite, enterprise-grade Multi-Agent Sales Engine built inside Claude Code. It autonomously drives your entire B2B revenue pipeline—from raw intent signals and domain URLs to personalized outreach, structured lead scoring, and playbook-aligned meeting frameworks—entirely from the command line.
 
-Powered by 5 dynamically orchestrated parallel agents, it combines automated prospecting, hyper-personalized email outreach, and psychological objection-handling frameworks. Specialized subagents operate with deep context awareness and real-time agent interactions across every stage of the funnel, supported by deterministic data quality gates to protect pipeline integrity from first signal
+AI-SalesForge is a full-suite, enterprise-grade **Multi-Agent Sales Engine** built inside Claude Code. It autonomously drives your entire B2B revenue pipeline—from raw intent signals and domain URLs to psychological objection handling, competitive positioning, and closed-loop deal acceleration.
+
+Powered by 5 dynamically orchestrated parallel agents, it combines automated prospecting, hyper-personalized email outreach, and psychological objection-handling frameworks. Specialized subagents orchestrate lead qualification, competitive intelligence gathering, and real-time sales strategy adaptation across your entire pipeline.
 
 ---
 
 ## 🚀 Key Overhauls & Architectural Enhancements
 
-This repository represents a complete production hardening of the baseline CLI sales script engine, introducing strict state-management safeguards, psychological framing systems, and analytical tracking algorithms:
+This repository represents a complete production hardening of the baseline CLI sales script engine, introducing strict state-management safeguards, psychological framing systems, and analytical tracking across your entire go-to-market motion.
 
 ### 🧠 1. Psychological Objection Dominance (`skills/sales-objections/`)
+
 Replaced basic narrative pushback guidelines with a comprehensive, 895-line operational matrix detailing four core high-resistance defense architectures:
-*   **LQS (Label → Question → Silence):** Tactical labeling to lower cognitive barriers and defuse pressure.
-*   **MIC (Mirror → Implication Chain → Permission Close):** Structural framing that leverages behavioral loss aversion to isolate the economic cost of inaction.
-*   **AAR (Accusation Audit → Reversal):** Preemptive defense mechanisms engineered to neutralize baseline skepticism in cold accounts.
-*   **FCA (Future Pace → Cost Anchor → Autonomy Return):** Long-term valuation anchoring balanced with immediate preservation of prospect agency.
-*   *Enforced with pattern interrupts, explicit timed conversational silences, and binary disqualification gates across 15 enterprise-level buying objections.*
+
+- **LQS (Label → Question → Silence):** Tactical labeling to lower cognitive barriers and defuse pressure.
+- **MIC (Mirror → Implication Chain → Permission Close):** Structural framing that leverages behavioral loss aversion to isolate the economic cost of inaction.
+- **AAR (Accusation Audit → Reversal):** Preemptive defense mechanisms engineered to neutralize baseline skepticism in cold accounts.
+- **FCA (Future Pace → Cost Anchor → Autonomy Return):** Long-term valuation anchoring balanced with immediate preservation of prospect agency.
+- **Enforced with pattern interrupts, explicit timed conversational silences, and binary disqualification gates across 15 enterprise-level buying objections.**
 
 ### 🛡️ 2. Autonomous Initialization & Data Quality Gates (`agents/sales-strategy.md`)
-*   **Initialization Gate:** `Agent 5 (sales-strategy)` executes an integrated validation pass over incoming payloads before spinning up the sub-agent cluster.
-*   **Fallback Vectors:** Structural data gaps dynamically redirect execution paths. Missing data points trigger immediate identity extraction steps; unverified intent vectors run localized hypothesis testing; low firmographic certainty degrades lead tier mapping automatically to protect your downstream deliverability.
+
+- **Initialization Gate:** `Agent 5 (sales-strategy)` executes an integrated validation pass over incoming payloads before spinning up the sub-agent cluster.
+- **Fallback Vectors:** Structural data gaps dynamically redirect execution paths. Missing data points trigger immediate identity extraction steps; unverified intent vectors run localized hypothesis testing against closed-loop email signatures.
+- **State Management:** All operational state is persisted in locked YAML registry files to prevent mid-pipeline desynchronization.
 
 ### 📊 3. Two-Pass Math Weighting Engine (`scripts/lead_scorer.py`)
+
 Upgraded lead qualification mathematics from simple keyword tracking into a two-tiered analytics pipeline:
-*   **Pass 1 (Surface Mining):** Extracts open-web firmographics and standard digital intent signals.
-*   **Pass 2 (Agent Enrichment):** Reads, maps, and merges specialized agent-written behavioral data (`SIGNAL-DATA.json`).
-*   **Delta Metric:** Directly surfaces the performance delta between surface data and deep agent context to mathematically track your actual pipeline enrichment leverage.
+
+- **Pass 1 (Surface Mining):** Extracts open-web firmographics and standard digital intent signals.
+- **Pass 2 (Agent Enrichment):** Reads, maps, and merges specialized agent-written behavioral data (`SIGNAL-DATA.json`).
+- **Delta Metric:** Directly surfaces the performance delta between surface data and deep agent context to mathematically track your actual pipeline enrichment leverage.
 
 ### 🔄 4. Closed-Loop Context Alignment & Continuous Intel
-*   **`sales-competitive.md` & `COMPETITIVE-LIBRARY.md`:** The competitive intelligence agent continuously tracks adversary patterns, loop-referencing historical logs on every runtime path and updating a persistent library to scale tactical edge.
-*   **`sales-prep.md` & `OBJECTION-PLAYBOOK.md`:** If an objection playbook is present, Rule 7 forces the preparation agent to extract word-for-word tactical scripts directly into Section 8 of your generated meeting briefs.
-*   **`sales-icp.md`:** The `/sales icp refine` sub-command parses your historical outreach logs, detects behavioral commonalities among top-tier prospects, and adjusts the core ICP structure with a clean markdown `before/after` diff.
+
+- **`sales-competitive.md` & `COMPETITIVE-LIBRARY.md`:** The competitive intelligence agent continuously tracks adversary patterns, loop-referencing historical logs on every runtime path and updating market context with weaponized positioning frameworks.
+- **`sales-prep.md` & `OBJECTION-PLAYBOOK.md`:** If an objection playbook is present, Rule 7 forces the preparation agent to extract word-for-word tactical scripts directly into Section 8 of your outreach email, ensuring message consistency at scale.
+- **`sales-icp.md`:** The `/sales icp refine` sub-command parses your historical outreach logs, detects behavioral commonalities among top-tier prospects, and adjusts the core ICP structure with statistical confidence intervals.
 
 ---
 
@@ -39,7 +47,7 @@ Upgraded lead qualification mathematics from simple keyword tracking into a two-
 Type a command inside Claude Code to launch the specialized multi-agent pipeline:
 
 ```bash
-> /sales prospect [https://target-prospect.com](https://target-prospect.com)
+> /sales prospect https://target-prospect.com
 
 Phase 1: Discovering company information...
  ✓ Homepage fetched — SaaS / B2B Enterprise detected
@@ -58,8 +66,14 @@ Phase 3: Synthesizing results...
  ✓ Top Target Located: [VP of Infrastructure] — Strong proxy signal detected
  ✓ Core Opening Angle: Active engineering hiring surge + legacy platform friction
  💾 Output Saved: PROSPECT-ANALYSIS.md
+```
 
-## Repo Overview
+---
+
+## 📁 Repository Structure
+
+```
+.
 ├── agents/
 │   ├── sales-strategy.md       # Swarm Orchestrator & Data Quality Gate
 │   ├── sales-competitive.md    # Continuous Threat Matrix Loop
@@ -67,11 +81,11 @@ Phase 3: Synthesizing results...
 │   ├── sales-contacts.md       # Identity & Target Committee Mapper
 │   └── sales-opportunity.md    # Dynamic Intent Pipeline Agent
 ├── skills/
-│   ├── sales-objections/      # LQS, MIC, AAR, FCA Psychological Engines
-│   ├── sales-icp/             # Automated Analytics & Profile Diff Engine
-│   ├── sales-prep/            # Playbook-Synced Briefing Generation
-│   ├── sales-followup/        # Context-Locked Nurture Automation
-│   └── [Other Skills]         # Core handlers (Prospect, Research, Qualify, etc.)
+│   ├── sales-objections/       # LQS, MIC, AAR, FCA Psychological Engines
+│   ├── sales-icp/              # Automated Analytics & Profile Diff Engine
+│   ├── sales-prep/             # Playbook-Synced Briefing Generation
+│   ├── sales-followup/         # Context-Locked Nurture Automation
+│   └── [Other Skills]          # Core handlers (Prospect, Research, Qualify, etc.)
 ├── templates/
 │   ├── COMPETITIVE-LIBRARY.md  # Long-term marketplace intelligence tracking
 │   ├── OUTREACH-LOG.md         # Validated outreach state registry
@@ -79,11 +93,59 @@ Phase 3: Synthesizing results...
 │   ├── MARKET-CONTEXT.md       # Regional tool behavior & cultural overrides
 │   └── OBJECTION-PLAYBOOK.md   # Script injection mapping asset
 └── scripts/
-    ├── lead_scorer.py         # Two-Pass Math Scoring Script
-    ├── contact_finder.py      # Verification Mining Protocol
-    └── generate_pdf_report.py # Automated Report Compilation Script
+    ├── lead_scorer.py          # Two-Pass Math Scoring Script
+    ├── contact_finder.py       # Verification Mining Protocol
+    └── generate_pdf_report.py  # Automated Report Compilation Script
+```
 
 ---
 
+## 🎯 Core Features
 
+### Automated Prospecting
+- Intent signal detection and domain analysis
+- Firmographic extraction and enrichment
+- Buying committee identification and mapping
 
+### Hyper-Personalized Outreach
+- Dynamic email generation based on prospect context
+- Playbook-synced messaging frameworks
+- Multi-touch nurture sequences
+
+### Psychological Objection Handling
+- LQS, MIC, AAR, FCA tactical frameworks
+- Pattern interrupt deployment
+- Binary disqualification gates
+
+### Competitive Intelligence
+- Continuous threat matrix monitoring
+- Market positioning weaponization
+- Historical pattern referencing
+
+### Closed-Loop Analytics
+- Two-pass lead scoring (surface + agent enrichment)
+- Delta metric tracking
+- Performance benchmarking
+
+---
+
+## 🔧 Getting Started
+
+1. Clone this repository
+2. Configure your sales ICP and market context in `templates/`
+3. Load the specialized sales agents into Claude Code
+4. Use `/sales prospect [URL]` to begin autonomous pipeline analysis
+
+---
+
+## 📝 License
+
+[Add your license information here]
+
+## 👤 Author
+
+Created by [Your Name/Organization]
+
+---
+
+**AI-SalesForge** — Your enterprise-grade, psychology-driven sales acceleration engine.
