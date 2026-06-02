@@ -63,14 +63,16 @@ Phase 3: Synthesizing results...
  ✓ Core Opening Angle: Active engineering hiring surge + legacy platform friction
  💾 Output Saved: PROSPECT-ANALYSIS.md
 
-Command,Description,Output Artifact
-/sales prospect <url>,Full 360° account audit launching 5 parallel agents.,PROSPECT-ANALYSIS.md
-/sales quick <url>,Fast 60-second firmographic & visibility snapshot.,Terminal Output
-/sales research <url>,Deep-dive deep web company research & metadata.,COMPANY-RESEARCH.md
-/sales qualify <url>,Two-pass BANT + MEDDIC scoring optimization.,LEAD-QUALIFICATION.md
-/sales contacts <url>,"Maps decision-makers, buying roles, and contact gaps.",DECISION-MAKERS.md
-/sales outreach <name>,Multi-step hyper-personalized messaging sequences.,OUTREACH-SEQUENCE.md
-/sales followup <name>,Context-locked follow-ups synced to previous touchpoints.,FOLLOWUP-SEQUENCE.md
-/sales prep <url>,Meeting briefing document with embedded script scripts.,MEETING-PREP.md
-/sales proposal <client>,"Comprehensive, ROI-benchmarked closing agreements.",PROPOSAL-DOCUMENT.md
-/sales report,Scans OUTREACH-LOG.md to spit out dynamic pipeline health.,Terminal + PDF Option
+
+| Command | Description | Output Artifact |
+|---|---|---|
+| `/sales prospect <url>` | Full 360° account audit launching 5 parallel agents. | `PROSPECT-ANALYSIS.md` |
+| `/sales quick <url>` | Fast 60-second firmographic & visibility snapshot. | Terminal Output |
+| `/sales research <url>` | Deep-dive deep web company research & metadata. | `COMPANY-RESEARCH.md` |
+| `/sales qualify <url>` | Two-pass BANT + MEDDIC scoring optimization. | `LEAD-QUALIFICATION.md` |
+| `/sales contacts <url>` | Maps decision-makers, buying roles, and contact gaps. | `DECISION-MAKERS.md` |
+| `/sales outreach <name>` | Multi-step hyper-personalized messaging sequences. | `OUTREACH-SEQUENCE.md` |
+| `/sales followup <name>` | Context-locked follow-ups synced to previous touchpoints. | `FOLLOWUP-SEQUENCE.md` |
+| `/sales prep <url>` | Meeting briefing document with embedded tactical scripts. | `MEETING-PREP.md` |
+| `/sales proposal <client>` | Comprehensive, ROI-benchmarked closing agreements. | `PROPOSAL-DOCUMENT.md` |
+| `/sales report` | Scans OUTREACH-LOG.md to spit out dynamic pipeline health. | Terminal + PDF Option |
