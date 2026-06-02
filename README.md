@@ -1,196 +1,593 @@
-# AI-SalesForge
 
-AI-SalesForge is a full-suite, enterprise-grade **Multi-Agent Sales Engine** built inside Claude Code. It autonomously drives your entire B2B revenue pipeline—from raw intent signals and domain URLs to psychological objection handling, competitive positioning, and closed-loop deal acceleration.
-
-Powered by 5 dynamically orchestrated parallel agents, it combines automated prospecting, hyper-personalized email outreach, and psychological objection-handling frameworks. Specialized subagents orchestrate lead qualification, competitive intelligence gathering, and real-time sales strategy adaptation across your entire pipeline.
+> **A full AI-powered sales system running inside Claude Code.**
+> Research any company, score leads with BANT + MEDDIC, map buying committees, generate personalized outreach, handle objections with FBI negotiation tactics, prepare for meetings, and produce professional PDF pipeline reports — all from the command line.
 
 ---
 
-## 🚀 Key Overhauls & Architectural Enhancements
+## What This Does
 
-This repository represents a complete production hardening of the baseline CLI sales script engine, introducing strict state-management safeguards, psychological framing systems, and analytical tracking across your entire go-to-market motion.
+Type a command in Claude Code and get instant, actionable sales intelligence:
 
-### 🧠 1. Psychological Objection Dominance (`skills/sales-objections/`)
+```
+> /sales prospect https://acme.com
 
-Replaced basic narrative pushback guidelines with a comprehensive, 895-line operational matrix detailing four core high-resistance defense architectures:
-
-- **LQS (Label → Question → Silence):** Tactical labeling to lower cognitive barriers and defuse pressure.
-- **MIC (Mirror → Implication Chain → Permission Close):** Structural framing that leverages behavioral loss aversion to isolate the economic cost of inaction.
-- **AAR (Accusation Audit → Reversal):** Preemptive defense mechanisms engineered to neutralize baseline skepticism in cold accounts.
-- **FCA (Future Pace → Cost Anchor → Autonomy Return):** Long-term valuation anchoring balanced with immediate preservation of prospect agency.
-- **Enforced with pattern interrupts, explicit timed conversational silences, and binary disqualification gates across 15 enterprise-level buying objections.**
-
-### 🛡️ 2. Autonomous Initialization & Data Quality Gates (`agents/sales-strategy.md`)
-
-- **Initialization Gate:** `Agent 5 (sales-strategy)` executes an integrated validation pass over incoming payloads before spinning up the sub-agent cluster.
-- **Fallback Vectors:** Structural data gaps dynamically redirect execution paths. Missing data points trigger immediate identity extraction steps; unverified intent vectors run localized hypothesis testing against closed-loop email signatures.
-- **State Management:** All operational state is persisted in locked YAML registry files to prevent mid-pipeline desynchronization.
-
-### 📊 3. Two-Pass Math Weighting Engine (`scripts/lead_scorer.py`)
-
-Upgraded lead qualification mathematics from simple keyword tracking into a two-tiered analytics pipeline:
-
-- **Pass 1 (Surface Mining):** Extracts open-web firmographics and standard digital intent signals.
-- **Pass 2 (Agent Enrichment):** Reads, maps, and merges specialized agent-written behavioral data (`SIGNAL-DATA.json`).
-- **Delta Metric:** Directly surfaces the performance delta between surface data and deep agent context to mathematically track your actual pipeline enrichment leverage.
-
-### 🔄 4. Closed-Loop Context Alignment & Continuous Intel
-
-- **`sales-competitive.md` & `COMPETITIVE-LIBRARY.md`:** The competitive intelligence agent continuously tracks adversary patterns, loop-referencing historical logs on every runtime path and updating market context with weaponized positioning frameworks.
-- **`sales-prep.md` & `OBJECTION-PLAYBOOK.md`:** If an objection playbook is present, Rule 7 forces the preparation agent to extract word-for-word tactical scripts directly into Section 8 of your outreach email, ensuring message consistency at scale.
-- **`sales-icp.md`:** The `/sales icp refine` sub-command parses your historical outreach logs, detects behavioral commonalities among top-tier prospects, and adjusts the core ICP structure with statistical confidence intervals.
-
----
-
-## 📊 Terminal Interface & Command Suite
-
-Type a command inside Claude Code to launch the specialized multi-agent pipeline:
-
-```bash
-> /sales prospect https://target-prospect.com
+ICP Pre-Flight: ✓ IDEAL-CUSTOMER-PROFILE.md found
 
 Phase 1: Discovering company information...
- ✓ Homepage fetched — SaaS / B2B Enterprise detected
- ✓ 6 core subpages extracted (about, solution, pricing, careers, blog, contact)
- ✓ analyze_prospect.py — 23 core data points mapped to disk
+  ✓ Homepage fetched — SaaS / B2B detected
+  ✓ 6 subpages extracted (about, team, pricing, careers, blog, contact)
+  ✓ analyze_prospect.py — 23 data points extracted
+  ✓ MARKET-CONTEXT.md loaded
 
-Phase 2: Running parallel analysis (5 specialized agents)...
-  [Agent 1] Company Research  ──> Fit Score: 91/100
-  [Agent 2] Contact Discovery ──> 6 decision makers mapped (Buying Committee)
-  [Agent 3] Opportunity Core  ──> BANT + MEDDIC validation complete
-  [Agent 4] Competitive Intel ──> 4 market adversaries isolated & logged
-  [Agent 5] Swarm Strategy    ──> Passed Data Quality Gate; structural check OK
+Phase 2: Running parallel analysis (5 agents)...
+  ✓ Company Research      — Fit Score: 82/100
+  ✓ Contact Discovery     — 4 contacts found
+  ✓ Opportunity Scoring   — BANT: 78/100
+  ✓ Competitive Intel     — 3 competitors mapped, library updated
+  ✓ Outreach Strategy     — 5-email sequence ready
+    └─ Data Quality Gate  — all signals confirmed
 
-Phase 3: Synthesizing results...
- ✓ Prospect Score: 88/100 (Grade A)
- ✓ Top Target Located: [VP of Infrastructure] — Strong proxy signal detected
- ✓ Core Opening Angle: Active engineering hiring surge + legacy platform friction
- 💾 Output Saved: PROSPECT-ANALYSIS.md
-```
+Phase 3: Synthesizing results (two-pass scoring)...
+  ✓ Pass 1 Score: 74/100 (website signals)
+  ✓ Pass 2 Score: 85/100 (agent-enriched)
+  ✓ Intelligence delta: +11 points from parallel agents
 
-### 🛠️ Complete CLI Command Mapping
+┌─────────────────────────────────────────────────┐
+│  PROSPECT SCORE                                 │
+│                                                 │
+│  ██████████████████████████████████░░░░  85/100  │
+│                                                 │
+│  Grade: A  —  Strong Prospect                   │
+│  Action: Invest significant effort              │
+└─────────────────────────────────────────────────┘
 
-| Command | Description | Output Artifact |
-|---------|-------------|-----------------|
-| `/sales prospect <url>` | Full 360° account audit launching 5 parallel agents. | `PROSPECT-ANALYSIS.md` |
-| `/sales quick <url>` | Fast 60-second firmographic & visibility snapshot. | Terminal Output |
-| `/sales research <url>` | Deep-dive web company research & metadata extraction. | `COMPANY-RESEARCH.md` |
-| `/sales qualify <url>` | Two-pass BANT + MEDDIC scoring optimization. | `LEAD-QUALIFICATION.md` |
-| `/sales contacts <url>` | Maps decision-makers, buying roles, and contact gaps. | `DECISION-MAKERS.md` |
-| `/sales outreach <name>` | Multi-step hyper-personalized messaging sequences. | `OUTREACH-SEQUENCE.md` |
-| `/sales followup <name>` | Context-locked follow-ups synced to previous touchpoints. | `FOLLOWUP-SEQUENCE.md` |
-| `/sales prep <url>` | Meeting briefing document with embedded script tactics. | `MEETING-PREP.md` |
-| `/sales proposal <client>` | Comprehensive, ROI-benchmarked closing agreements. | `PROPOSAL-DOCUMENT.md` |
-| `/sales report` | Scans `OUTREACH-LOG.md` to spit out dynamic pipeline health. | Terminal + PDF Option |
-
----
-
-## 📁 Repository Structure
-
-```
-.
-├── agents/
-│   ├── sales-strategy.md       # Swarm Orchestrator & Data Quality Gate
-│   ├── sales-competitive.md    # Continuous Threat Matrix Loop
-│   ├── sales-company.md        # Firmographic Processing Core
-│   ├── sales-contacts.md       # Identity & Target Committee Mapper
-│   └── sales-opportunity.md    # Dynamic Intent Pipeline Agent
-├── skills/
-│   ├── sales-objections/       # LQS, MIC, AAR, FCA Psychological Engines
-│   ├── sales-icp/              # Automated Analytics & Profile Diff Engine
-│   ├── sales-prep/             # Playbook-Synced Briefing Generation
-│   ├── sales-followup/         # Context-Locked Nurture Automation
-│   └── [Other Skills]          # Core handlers (Prospect, Research, Qualify, etc.)
-├── templates/
-│   ├── COMPETITIVE-LIBRARY.md  # Long-term marketplace intelligence tracking
-│   ├── OUTREACH-LOG.md         # Validated outreach state registry
-│   ├── ROI-BENCHMARKS.md       # Economic justification milestones
-│   ├── MARKET-CONTEXT.md       # Regional tool behavior & cultural overrides
-│   └── OBJECTION-PLAYBOOK.md   # Script injection mapping asset
-└── scripts/
-    ├── lead_scorer.py          # Two-Pass Math Scoring Script
-    ├── contact_finder.py       # Verification Mining Protocol
-    └── generate_pdf_report.py  # Automated Report Compilation Script
+Full analysis saved to PROSPECT-ANALYSIS.md
 ```
 
 ---
 
-## 🎯 Core Features
+## Quick Start
 
-### Automated Prospecting
-- Intent signal detection and domain analysis
-- Firmographic extraction and enrichment
-- Buying committee identification and mapping
-
-### Hyper-Personalized Outreach
-- Dynamic email generation based on prospect context
-- Playbook-synced messaging frameworks
-- Multi-touch nurture sequences
-
-### Psychological Objection Handling
-- LQS, MIC, AAR, FCA tactical frameworks
-- Pattern interrupt deployment
-- Binary disqualification gates
-
-### Competitive Intelligence
-- Continuous threat matrix monitoring
-- Market positioning weaponization
-- Historical pattern referencing
-
-### Closed-Loop Analytics
-- Two-pass lead scoring (surface + agent enrichment)
-- Delta metric tracking
-- Performance benchmarking
-
----
-
-## ⚡ Quick Start & Installation
-
-### 1. Provision Locally
-
-Clone the repository to your local runtime environment:
+### One-Command Install
 
 ```bash
-git clone https://github.com/Its-Leo-Space/ai-sales-forge.git
-cd ai-sales-forge
+curl -fsSL https://raw.githubusercontent.com/Its-Leo-Space/AI-SalesForge/main/install.sh | bash
 ```
 
-### 2. Run the Environment Installer
-
-Execute the setup wrapper to build project tracking directories and extract necessary dependencies:
+### Manual Install
 
 ```bash
-chmod +x install.sh
+git clone https://github.com/Its-Leo-Space/AI-SalesForge.git
+cd AI-SalesForge
 ./install.sh
 ```
 
-### 3. Initialize Variables
-
-Populate your newly generated local `.env` configuration file:
-
-```plaintext
-CLAUDE_API_KEY=your_key_here
-SERPER_API_KEY=your_key_here
-```
-
-### 4. Run Pre-Flight Diagnostics
-
-Ensure your two-pass scoring layers and file tracking systems are perfectly calibrated before live deployment:
+### Optional: PDF Reports & Enhanced Parsing
 
 ```bash
-python scripts/lead_scorer.py
+pip install -r requirements.txt
+```
+
+<details>
+<summary><strong>What the installer does</strong></summary>
+
+```
+╔══════════════════════════════════════════════════════════╗
+║  AI Sales Forge — Claude Code Skills                    ║
+║  14 Skills · 5 Agents · 4 Scripts · PDF                 ║
+╚══════════════════════════════════════════════════════════╝
+
+Installing skills...
+  ✓ sales (orchestrator)
+  ✓ sales-prospect
+  ✓ sales-research
+  ✓ sales-qualify
+  ✓ sales-contacts
+  ✓ sales-outreach
+  ✓ sales-followup
+  ✓ sales-prep
+  ✓ sales-proposal
+  ✓ sales-objections
+  ✓ sales-icp
+  ✓ sales-competitors
+  ✓ sales-report
+  ✓ sales-report-pdf
+
+Installing agents...
+  ✓ sales-company
+  ✓ sales-contacts
+  ✓ sales-opportunity
+  ✓ sales-competitive
+  ✓ sales-strategy
+
+Installing scripts...
+  ✓ analyze_prospect.py
+  ✓ lead_scorer.py
+  ✓ contact_finder.py
+  ✓ generate_pdf_report.py
+
+Installing templates...
+  ✓ outreach-cold.md
+  ✓ outreach-warm.md
+  ✓ outreach-referral.md
+  ✓ meeting-prep.md
+  ✓ proposal-template.md
+  ✓ OBJECTION-PLAYBOOK.md
+  ✓ COMPETITIVE-LIBRARY.md
+  ✓ OUTREACH-LOG.md
+  ✓ ROI-BENCHMARKS.md
+  ✓ MARKET-CONTEXT.md
+```
+
+</details>
+
+---
+
+## Commands
+
+| Command | Description | Output |
+|:--------|:------------|:-------|
+| `/sales prospect <url>` | Full prospect audit — **5 parallel agents** | `PROSPECT-ANALYSIS.md` |
+| `/sales quick <url>` | 60-second prospect snapshot | Terminal output |
+| `/sales research <url>` | Company research & firmographics | `COMPANY-RESEARCH.md` |
+| `/sales qualify <url>` | BANT + MEDDIC lead scoring | `LEAD-QUALIFICATION.md` |
+| `/sales contacts <url>` | Decision maker identification | `DECISION-MAKERS.md` |
+| `/sales outreach <prospect>` | Cold outreach email sequence | `OUTREACH-SEQUENCE.md` |
+| `/sales followup <prospect>` | Follow-up sequence (anchored to meeting prep) | `FOLLOWUP-SEQUENCE.md` |
+| `/sales prep <url>` | Meeting preparation brief | `MEETING-PREP.md` |
+| `/sales proposal <client>` | Client proposal with ROI benchmarks | `CLIENT-PROPOSAL.md` |
+| `/sales objections <topic>` | Objection handling — LQS / MIC / AAR / FCA | `OBJECTION-PLAYBOOK.md` |
+| `/sales icp <description>` | Ideal Customer Profile builder | `IDEAL-CUSTOMER-PROFILE.md` |
+| `/sales icp refine` | Refine ICP from existing prospect files | `IDEAL-CUSTOMER-PROFILE.md` |
+| `/sales competitors <url>` | Competitive intelligence (persistent library) | `COMPETITIVE-INTEL.md` |
+| `/sales report` | Pipeline report (reads outreach logs) | `SALES-REPORT.md` |
+| `/sales report-pdf` | Pipeline report (PDF) | `SALES-REPORT-*.pdf` |
+
+---
+
+## How It Works
+
+### Architecture
+
+The system uses a three-layer architecture — one orchestrator skill routes commands to 13 sub-skills, with the flagship `/sales prospect` command launching 5 specialized agents in parallel:
+
+```
+                         ┌──────────────────────────┐
+                         │     /sales prospect       │
+                         │      (Orchestrator)       │
+                         │   + ICP Pre-Flight Check  │
+                         └────────────┬─────────────┘
+                                      │
+                    ┌─────────────────┼─────────────────┐
+                    ▼                 ▼                  ▼
+          ┌─────────────┐   ┌─────────────────┐   ┌──────────────┐
+          │   PHASE 1    │   │     PHASE 2      │   │   PHASE 3    │
+          │  Discovery   │   │ Parallel Analysis│   │  Synthesis   │
+          └──────┬──────┘   └────────┬─────────┘   └──────┬───────┘
+                 │                   │                     │
+                 ▼                   ▼                     ▼
+          ┌─────────────┐   ┌───────────────┐      ┌──────────────┐
+          │ Fetch site   │   │ 5 agents run  │      │ Two-pass     │
+          │ Extract data │   │ simultaneously│      │ score (0-100)│
+          │ Detect type  │   │ + Data Quality│      │ Action plan  │
+          │ Run scripts  │   │   Gate (Ag.5) │      │ First email  │
+          └─────────────┘   └───────┬───────┘      └──────────────┘
+                                    │
+                 ┌──────────────────┼──────────────────┐
+                 │                  │                   │
+        ┌────────────────┐  ┌──────────────┐  ┌───────────────┐
+        │   Company      │  │   Contacts   │  │  Opportunity  │
+        │   Research     │  │   Finder     │  │  Scoring      │
+        │   Fit: 25%     │  │   Access:20% │  │  Quality: 20% │
+        └────────────────┘  └──────────────┘  └───────────────┘
+        ┌────────────────┐  ┌──────────────┐
+        │   Competitive  │  │   Outreach   │
+        │   Analysis     │  │   Strategy   │
+        │ + Persistent   │  │ + Data       │
+        │   Library      │  │   Quality    │
+        │   Position:15% │  │   Gate: 20%  │
+        └────────────────┘  └──────────────┘
+```
+
+### Cross-Skill Intelligence
+
+Skills automatically detect and build on each other's output — nothing is generated in isolation:
+
+```
+/sales prospect  ──►  PROSPECT-ANALYSIS.md
+                            │
+       ┌────────────────────┼─────────────────────┐
+       ▼                    ▼                      ▼
+/sales outreach      /sales prep             /sales proposal
+ (reads contacts,    (reads objection        (reads ROI
+  research data)      playbook → Sec. 8)      benchmarks)
+       │                    │                      │
+       ▼                    ▼                      ▼
+ OUTREACH-             MEETING-               CLIENT-
+ SEQUENCE.md  ──►      PREP.md    ──►         PROPOSAL.md
+ OUTREACH-LOG.md       (anchors follow-up)    (⚠️ flags estimates)
+       │
+       ▼
+/sales report
+ (reads OUTREACH-LOG for
+  actual pipeline reality)
+
+/sales competitors  ──►  COMPETITIVE-INTEL.md
+                               │
+                               ▼
+                         COMPETITIVE-LIBRARY.md
+                         (persists across all runs)
+                               │
+                               ▼
+                    next /sales prospect reads
+                    prior competitive intel
 ```
 
 ---
 
-## 🔧 Getting Started
+## Prospect Scoring
 
-1. Complete the Quick Start & Installation steps above
-2. Configure your sales ICP and market context in `templates/`
-3. Load the specialized sales agents into Claude Code
-4. Use `/sales prospect [URL]` to begin autonomous pipeline analysis
-5. Review generated analysis artifacts in your project directory
+Every prospect gets a **weighted composite score (0-100)** calculated across 5 dimensions, with two scoring passes to measure how much the agents added beyond raw website data:
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│   PROSPECT SCORE FORMULA                                            │
+│                                                                     │
+│   Company Fit ............ 25%   ████████████░░░░░░░░  Size,        │
+│                                                        industry,    │
+│                                                        growth       │
+│                                                                     │
+│   Contact Access ......... 20%   █████████░░░░░░░░░░░  Decision     │
+│                                                        makers,      │
+│                                                        warm paths   │
+│                                                                     │
+│   Opportunity Quality .... 20%   █████████░░░░░░░░░░░  BANT score,  │
+│                                                        pain points  │
+│                                                                     │
+│   Competitive Position ... 15%   ███████░░░░░░░░░░░░░  Current      │
+│                                                        solutions,   │
+│                                                        switching    │
+│                                                                     │
+│   Outreach Readiness ..... 20%   █████████░░░░░░░░░░░  Channels,    │
+│                                                        messaging,   │
+│                                                        anchors      │
+│                                                                     │
+│   Pass 1: website signals only                                      │
+│   Pass 2: agent-enriched (SIGNAL-DATA.json merged)                  │
+│   Delta:  intelligence gap surfaced explicitly                      │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+### Grade Interpretation
+
+```
+  Score    Grade    Action
+ ───────────────────────────────────────────────────────────
+  90-100    A+      🔥  Hot Lead — prioritize immediately
+  75-89     A       ✅  Strong Prospect — invest significant effort
+  60-74     B       📊  Qualified Lead — pursue with standard approach
+  40-59     C       🔄  Lukewarm — nurture, don't hard sell
+   0-39     D       ⏸️   Poor Fit — deprioritize or disqualify
+```
+
+### Qualification Frameworks
+
+<details>
+<summary><strong>BANT Scoring (0-100)</strong></summary>
+
+Each dimension scored 0-25 from publicly available signals:
+
+| Dimension | Max | Signals |
+|-----------|-----|---------|
+| **Budget** | 25 | Funding, employee count, pricing pages, tech spend |
+| **Authority** | 25 | Decision makers found, C-suite identified, org chart |
+| **Need** | 25 | Pain points, job posts, reviews, competitor gaps |
+| **Timeline** | 25 | Recent funding, hiring, contract cycles, urgency |
+
+</details>
+
+<details>
+<summary><strong>MEDDIC Assessment (0-100%)</strong></summary>
+
+Each dimension assessed for completeness:
+
+- **M**etrics — Can we quantify the business impact?
+- **E**conomic Buyer — Who controls the budget?
+- **D**ecision Criteria — How will they evaluate solutions?
+- **D**ecision Process — What's their buying process?
+- **I**dentify Pain — Are pain points confirmed?
+- **C**hampion — Is there an internal advocate?
+
+</details>
 
 ---
 
-**AI-SalesForge** — Your enterprise-grade, psychology-driven sales acceleration engine.
+## Objection Handling
+
+Four response architectures grounded in FBI negotiation tactics (Chris Voss) and cognitive psychology (Kahneman). Each is selected automatically based on the type of resistance detected.
+
+```
+┌────────────────────────────────────────────────────────────────┐
+│  OBJECTION RESPONSE ARCHITECTURES                              │
+├────────────────┬───────────────────────────────────────────────┤
+│  LQS           │  Label → Question → Silence                   │
+│                │  Use: emotional / vague objections            │
+│                │  Foundation: Voss labeling, silence technique │
+├────────────────┼───────────────────────────────────────────────┤
+│  MIC           │  Mirror → Implication Chain → Permission Close│
+│                │  Use: price / budget objections               │
+│                │  Foundation: Kahneman loss aversion (2:1)     │
+├────────────────┼───────────────────────────────────────────────┤
+│  AAR           │  Accusation Audit → Reversal                  │
+│                │  Use: high-resistance / hostile prospects     │
+│                │  Foundation: pre-empt the attack              │
+├────────────────┼───────────────────────────────────────────────┤
+│  FCA           │  Future Pace → Cost Anchor → Autonomy Return  │
+│                │  Use: "not right now" / timing objections     │
+│                │  Foundation: autonomy preservation            │
+└────────────────┴───────────────────────────────────────────────┘
+```
+
+All 15 universal objections include: a diagnostic tree, pattern interrupt, power move, silence instruction with exact seconds, implication chain, explicit loss framing, and disqualification criteria.
+
+---
+
+## Key Capabilities
+
+### ICP Pre-Flight Check
+The orchestrator checks for an ICP file before routing any command. No ICP on file means you get an explicit prompt rather than silently producing output calibrated for nobody.
+
+### ICP Refinement
+`/sales icp refine` reads all existing prospect files, identifies what your highest and lowest scoring prospects have in common, and produces an updated ICP with a visible before/after diff. Your targeting sharpens automatically as your pipeline grows.
+
+### Persistent Competitive Memory
+Every `/sales competitors` run reads from and writes back to `COMPETITIVE-LIBRARY.md`. Competitive intelligence compounds across sessions rather than resetting each time.
+
+### Data Quality Gate
+The strategy agent assesses incoming data quality before writing a single word of outreach. Low contact data triggers a research checklist. Unconfirmed needs shift the framework to hypothesis mode. Poor company fit caps the score and surfaces a warning.
+
+### ROI-Honest Proposals
+`/sales proposal` reads `ROI-BENCHMARKS.md` and either cites real evidence or flags estimates with `⚠️`. No invented numbers.
+
+### Market Context Awareness
+`MARKET-CONTEXT.md` feeds into both the prospect and competitive agents — local tool signatures, relationship norms, and regional funding signals pass through to every analysis that touches geography or buying behaviour.
+
+---
+
+## Examples
+
+### Full Prospect Audit
+
+```
+> /sales prospect https://stripe.com
+
+ICP Pre-Flight: ✓ IDEAL-CUSTOMER-PROFILE.md found
+
+Phase 1: Discovering company information...
+  ✓ Homepage fetched — SaaS / Fintech detected
+  ✓ 6 subpages extracted (about, team, pricing, careers, blog, contact)
+  ✓ analyze_prospect.py — 23 data points extracted
+
+Phase 2: Running parallel analysis (5 agents)...
+  ✓ Company Research      — Fit Score: 88/100
+  ✓ Contact Discovery     — 6 decision makers found
+  ✓ Opportunity Scoring   — BANT: 82/100
+  ✓ Competitive Intel     — 4 competitors mapped, library updated
+  ✓ Outreach Strategy     — 5-email sequence drafted
+    └─ Data Quality Gate  — all signals confirmed
+
+Phase 3: Synthesizing results...
+  ✓ Pass 1 Score: 76/100 (website signals)
+  ✓ Pass 2 Score: 85/100 (agent-enriched)
+  ✓ Intelligence delta: +9 points
+  ✓ Grade: A — Strong Prospect
+
+Output: PROSPECT-ANALYSIS.md
+```
+
+### Objection Handling
+
+```
+> /sales objections "enterprise SaaS"
+
+Generating objection playbook for enterprise SaaS...
+  Architecture selected: MIC for price objections
+  Architecture selected: LQS for vague/emotional resistance
+  Architecture selected: AAR for legal/procurement pushback
+
+  "It's too expensive"      → MIC: Implication Chain + Loss Frame
+  "We need to think"        → LQS: Label + Calibrated Question
+  "We already have a tool"  → FCA: Future Pace + Cost Anchor
+  "Not right now"           → FCA: Autonomy Return
+  "Send me some info"       → AAR: Accusation Audit
+  ... 10 more objections
+
+Output: OBJECTION-PLAYBOOK.md
+```
+
+### ICP Refinement
+
+```
+> /sales icp refine
+
+Reading all prospect files...
+  ✓ 12 PROSPECT-ANALYSIS files found
+  ✓ High scorers (A+/A): 5 prospects
+  ✓ Low scorers (C/D):   4 prospects
+
+Pattern analysis:
+  High-fit signals: Series B+, 50-200 employees, VP Engineering titles
+  Low-fit signals:  Pre-revenue, single founder, consumer-facing
+
+Before → After diff:
+  Company size:  "any" → "50-200 employees"
+  Funding stage: "any" → "Series A or later"
+  Champion role: "any" → "VP/Director Engineering or Product"
+
+Output: IDEAL-CUSTOMER-PROFILE.md (updated)
+```
+
+### Lead Qualification
+
+```
+> /sales qualify https://notion.so
+
+  BANT Score: 78/100 (Grade A)
+  ┌────────────────────────────────────┐
+  │ Budget:    ██████████████████░░ 22  │
+  │ Authority: ████████████████░░░░ 18  │
+  │ Need:      ██████████████████░░ 20  │
+  │ Timeline:  ████████████████░░░░ 18  │
+  └────────────────────────────────────┘
+  MEDDIC Completeness: 72%
+
+Action: Schedule discovery call — high-priority prospect.
+Output: LEAD-QUALIFICATION.md
+```
+
+---
+
+## Project Structure
+
+```
+AI-SalesForge/
+│
+├── sales/SKILL.md                     ← Main orchestrator (ICP pre-flight check)
+│
+├── skills/                            ← 13 sub-skills
+│   ├── sales-prospect/SKILL.md           Full prospect audit (5 agents + market context)
+│   ├── sales-research/SKILL.md           Company research & firmographics
+│   ├── sales-qualify/SKILL.md            Lead qualification (BANT + MEDDIC)
+│   ├── sales-contacts/SKILL.md           Decision maker identification
+│   ├── sales-outreach/SKILL.md           Cold outreach email sequences
+│   ├── sales-followup/SKILL.md           Follow-up (reads MEETING-PREP.md)
+│   ├── sales-prep/SKILL.md               Meeting prep (reads OBJECTION-PLAYBOOK.md)
+│   ├── sales-proposal/SKILL.md           Client proposal (reads ROI-BENCHMARKS.md)
+│   ├── sales-objections/SKILL.md         Objection engine — LQS / MIC / AAR / FCA
+│   ├── sales-icp/SKILL.md                ICP builder + /refine sub-command
+│   ├── sales-competitors/SKILL.md        Competitive intel (persistent library)
+│   ├── sales-report/SKILL.md             Pipeline report (reads OUTREACH-LOG files)
+│   └── sales-report-pdf/SKILL.md         Pipeline report (PDF)
+│
+├── agents/                            ← 5 parallel subagents
+│   ├── sales-company.md                  Company fit & firmographics (25%)
+│   ├── sales-contacts.md                 Decision maker mapping (20%)
+│   ├── sales-opportunity.md              Opportunity & BANT scoring (20%)
+│   ├── sales-competitive.md              Competitive positioning + library (15%)
+│   └── sales-strategy.md                 Outreach strategy + data quality gate (20%)
+│
+├── scripts/                           ← Python utilities
+│   ├── analyze_prospect.py               Website scraping & data extraction
+│   ├── lead_scorer.py                    BANT/MEDDIC + two-pass scoring engine
+│   ├── contact_finder.py                 Team & leadership extraction
+│   └── generate_pdf_report.py            ReportLab PDF generator
+│
+├── templates/                         ← Output templates
+│   ├── outreach-cold.md                  5-email cold sequence
+│   ├── outreach-warm.md                  3-email warm intro sequence
+│   ├── outreach-referral.md              3-email referral sequence
+│   ├── meeting-prep.md                   Meeting prep brief
+│   ├── proposal-template.md              11-section client proposal
+│   ├── OBJECTION-PLAYBOOK.md             15 objections — LQS / MIC / AAR / FCA
+│   ├── COMPETITIVE-LIBRARY.md            Persistent competitive intel store
+│   ├── OUTREACH-LOG.md                   Actual send/response tracking
+│   ├── ROI-BENCHMARKS.md                 Evidence base for proposal ROI claims
+│   └── MARKET-CONTEXT.md                 Regional/local market signals
+│
+├── install.sh                         ← One-command installer
+├── uninstall.sh                       ← Cleanup script
+├── requirements.txt                   ← Python deps (reportlab, bs4, requests)
+└── LICENSE                            ← MIT
+```
+
+---
+
+## Use Cases
+
+<table>
+<tr>
+<td width="33%">
+
+### Founders & Solopreneurs
+
+```bash
+# Full prospect intelligence
+/sales prospect https://target.com
+
+# Ready-to-send email sequence
+/sales outreach "Target Company"
+
+# Prep before the call
+/sales prep https://target.com
+
+# Sharpen targeting over time
+/sales icp refine
+```
+
+</td>
+<td width="33%">
+
+### Sales Teams
+
+```bash
+# Qualify inbound leads
+/sales qualify https://lead.com
+
+# Map the buying committee
+/sales contacts https://lead.com
+
+# Handle objections with
+# FBI negotiation tactics
+/sales objections "enterprise SaaS"
+```
+
+</td>
+<td width="33%">
+
+### Agency Owners
+
+```bash
+# Client proposal with real ROI
+/sales proposal "Client Name"
+
+# Competitive positioning
+# (builds persistent library)
+/sales competitors https://client.com
+
+# Define ideal customer
+/sales icp "B2B SaaS, 50-200 emp"
+```
+
+</td>
+</tr>
+</table>
+
+---
+
+## Requirements
+
+| Requirement | Status | Notes |
+|:------------|:------:|:------|
+| **Claude Code** | Required | [Install Claude Code](https://docs.anthropic.com/en/docs/claude-code) |
+| **Python 3.8+** | Optional | For scripts and PDF generation |
+| **reportlab** | Optional | `pip install reportlab` — PDF reports |
+| **beautifulsoup4** | Optional | `pip install beautifulsoup4` — enhanced parsing |
+| **requests** | Optional | `pip install requests` — fallback URL fetching |
+
+---
+
+## Uninstall
+
+```bash
+# From the repo directory
+./uninstall.sh
+
+# Or remotely
+curl -fsSL https://raw.githubusercontent.com/Its-Leo-Space/AI-SalesForge/main/uninstall.sh | bash
+```
+
+Removes all skills, agents, scripts, and templates from `~/.claude/`. Python packages are not removed.
+
+---
