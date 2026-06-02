@@ -1,16 +1,8 @@
-# ==========================================
-# Environment & Secrets
-# ==========================================
-.env
-.env.local
-.env.*.local
-*.env
-secret_key.txt
+# ============================================================
+# AI Sales Forge — .gitignore
+# ============================================================
 
-
-# ==========================================
-# AI Sales Forge Generated Reports
-# ==========================================
+# ── Generated output files (created in working directory) ───
 PROSPECT-ANALYSIS*.md
 COMPANY-RESEARCH*.md
 LEAD-QUALIFICATION*.md
@@ -22,83 +14,55 @@ CLIENT-PROPOSAL*.md
 OBJECTION-PLAYBOOK*.md
 IDEAL-CUSTOMER-PROFILE*.md
 COMPETITIVE-INTEL*.md
-COMPETITIVE-LIBRARY*.md
 SALES-REPORT*.md
 SALES-REPORT*.pdf
 
-
-# ==========================================
-# Runtime & Intermediate Files
-# ==========================================
-SIGNAL-DATA.json
+# ── Persistent knowledge base files (user-generated) ────────
+# These are populated at runtime by the agents.
+# Commit them intentionally if you want to share your data;
+# otherwise keep them local.
+COMPETITIVE-LIBRARY.md
 OUTREACH-LOG.md
-*.log
+ROI-BENCHMARKS.md
+MARKET-CONTEXT.md
+SIGNAL-DATA.json
 
-
-# ==========================================
-# Python
-# ==========================================
+# ── Python ───────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-.pytest_cache/
-.coverage
-htmlcov/
-
-
-# ==========================================
-# Virtual Environments
-# ==========================================
+*.pyo
+*.pyd
 venv/
 .venv/
 env/
-ENV/
-.venv_forge/
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
 
-
-# ==========================================
-# IDE & Editors
-# ==========================================
+# ── IDE & editor ─────────────────────────────────────────────
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
-.DS_Store
-.AppleDouble
-.LSOverride
-Thumbs.db
+*.suo
+*.user
 *.sublime-project
 *.sublime-workspace
 
-
-# ==========================================
-# OS Specific
-# ==========================================
+# ── OS ───────────────────────────────────────────────────────
 .DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── Logs & temp files ────────────────────────────────────────
+*.log
+*.tmp
+*.temp
+.cache/
