@@ -44,3 +44,33 @@ Type a command inside Claude Code to launch the specialized multi-agent pipeline
 
 ```bash
 > /sales prospect [https://target-prospect.com](https://target-prospect.com)
+
+Phase 1: Discovering company information...
+ ✓ Homepage fetched — SaaS / B2B Enterprise detected
+ ✓ 6 core subpages extracted (about, solution, pricing, careers, blog, contact)
+ ✓ analyze_prospect.py — 23 core data points mapped to disk
+
+Phase 2: Running parallel analysis (5 specialized agents)...
+  [Agent 1] Company Research  ──> Fit Score: 91/100
+  [Agent 2] Contact Discovery ──> 6 decision makers mapped (Buying Committee)
+  [Agent 3] Opportunity Core  ──> BANT + MEDDIC validation complete
+  [Agent 4] Competitive Intel ──> 4 market adversaries isolated & logged
+  [Agent 5] Swarm Strategy    ──> Passed Data Quality Gate; structural check OK
+
+Phase 3: Synthesizing results...
+ ✓ Prospect Score: 88/100 (Grade A)
+ ✓ Top Target Located: [VP of Infrastructure] — Strong proxy signal detected
+ ✓ Core Opening Angle: Active engineering hiring surge + legacy platform friction
+ 💾 Output Saved: PROSPECT-ANALYSIS.md
+
+Command,Description,Output Artifact
+/sales prospect <url>,Full 360° account audit launching 5 parallel agents.,PROSPECT-ANALYSIS.md
+/sales quick <url>,Fast 60-second firmographic & visibility snapshot.,Terminal Output
+/sales research <url>,Deep-dive deep web company research & metadata.,COMPANY-RESEARCH.md
+/sales qualify <url>,Two-pass BANT + MEDDIC scoring optimization.,LEAD-QUALIFICATION.md
+/sales contacts <url>,"Maps decision-makers, buying roles, and contact gaps.",DECISION-MAKERS.md
+/sales outreach <name>,Multi-step hyper-personalized messaging sequences.,OUTREACH-SEQUENCE.md
+/sales followup <name>,Context-locked follow-ups synced to previous touchpoints.,FOLLOWUP-SEQUENCE.md
+/sales prep <url>,Meeting briefing document with embedded script scripts.,MEETING-PREP.md
+/sales proposal <client>,"Comprehensive, ROI-benchmarked closing agreements.",PROPOSAL-DOCUMENT.md
+/sales report,Scans OUTREACH-LOG.md to spit out dynamic pipeline health.,Terminal + PDF Option
