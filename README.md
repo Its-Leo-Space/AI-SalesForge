@@ -1,13 +1,4 @@
-<p align="center">
-  <img src="banner.svg" alt="AI Sales Forge — Claude Code" width="100%">
-</p>
 
-<p align="center">
-  <a href="#quick-start"><img src="https://img.shields.io/badge/install-one--liner-008080?style=for-the-badge" alt="Install"></a>
-  <a href="#commands"><img src="https://img.shields.io/badge/14_skills-ready-4682b4?style=for-the-badge" alt="14 Skills"></a>
-  <a href="#how-it-works"><img src="https://img.shields.io/badge/5_parallel-agents-20b2aa?style=for-the-badge" alt="5 Agents"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-343a40?style=for-the-badge" alt="MIT License"></a>
-</p>
 
 > **A full AI-powered sales system running inside Claude Code.**
 > Research any company, score leads with BANT + MEDDIC, map buying committees, generate personalized outreach, handle objections with FBI negotiation tactics, prepare for meetings, and produce professional PDF pipeline reports — all from the command line.
