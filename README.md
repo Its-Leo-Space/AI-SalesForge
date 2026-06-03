@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/repo banner.png" alt="AI Sales Forge — Claude Code" width="100%">
+  <img src="repo-banner.png" alt="AI Sales Forge — Claude Code" width="100%">
 </p>
 
 > **A full AI-powered sales system running inside Claude Code.**
