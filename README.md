@@ -3,17 +3,36 @@
 </p>
 
 > **A full AI-powered sales system running inside Claude Code.**
-> Research any company, score leads with BANT + MEDDIC, map buying committees, generate personalized outreach, handle objections with FBI negotiation tactics, prepare for meetings, and produce professional pipeline reports.
+> Research any company, score leads with BANT + MEDDIC, map buying committees, generate personalized outreach, handle objections with FBI negotiation tactics, prepare for meetings, and produce profess[...]
 
 ---
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### First Command
 
-Before you begin, ensure you have the following installed:
-- **Claude Code** — [Install Claude Code](https://docs.anthropic.com/en/docs/claude-code)
-- **Git** — [Download Git](https://git-scm.com/downloads)
+After installation, open Claude Code and run:
+
+```bash
+/sales quick https://stripe.com
+```
+
+You'll get a 60-second prospect snapshot. Then explore the full command set below.
+
+---
+
+## Prerequisites
+
+| Requirement | Status | Purpose | Install |
+|:------------|:------:|:--------|:--------|
+| **Claude Code** | Required | Core runtime environment | [Install Claude Code](https://docs.anthropic.com/en/docs/claude-code) |
+| **Git** | Required | Clone repository & version control | [Download Git](https://git-scm.com/downloads) |
+| **Python 3.8+** | Optional | Scripts and PDF generation | Pre-installed on most systems |
+| **reportlab** | Optional | PDF report generation | `pip install reportlab` |
+| **beautifulsoup4** | Optional | Enhanced HTML parsing | `pip install beautifulsoup4` |
+| **requests** | Optional | Fallback URL fetching | `pip install requests` |
+
+> **Tip:** Install all optional dependencies at once with `pip install -r requirements.txt`
 
 ---
 
@@ -53,21 +72,6 @@ bash install.sh
 </td>
 </tr>
 </table>
-
----
-
-## Optional: PDF Reports & Enhanced Parsing
-
-For advanced features (PDF generation, better HTML parsing, robust URL fetching):
-
-```bash
-pip install -r requirements.txt
-```
-
-This installs:
-- **reportlab** — PDF report generation
-- **beautifulsoup4** — Enhanced HTML parsing
-- **requests** — Fallback URL fetching
 
 ---
 
@@ -275,33 +279,33 @@ Skills automatically detect and build on each other's output — nothing is gene
 Every prospect gets a **weighted composite score (0-100)** calculated across 5 dimensions, with two scoring passes to measure how much the agents added beyond raw website data:
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                                                                  │
-│   PROSPECT SCORE FORMULA                                         │
-│                                                                  │
-│   Company Fit ............ 25%   ████████████░░░░░░░░  Size,     │
-│                                                        industry,  │
-│                                                        growth     │
-│                                                                  │
-│   Contact Access ......... 20%   █████████░░░░░░░░░░░  Decision  │
-│                                                        makers,    │
-│                                                        warm paths │
-│                                                                  │
-│   Opportunity Quality .... 20%   █████████░░░░░░░░░░░  BANT      │
-│                                                        score,     │
-│                                                        pain pts   │
-│                                                                  │
-│   Competitive Position ... 15%   ███████░░░░░░░░░░░░░  Current   │
-│                                                        solutions  │
-│                                                                  │
-│   Outreach Readiness ..... 20%   █████████░░░░░░░░░░░  Channels, │
-│                                                        messaging  │
-│                                                                  │
-│   Pass 1: website signals only                                   │
-│   Pass 2: agent-enriched (SIGNAL-DATA.json merged)               │
-│   Delta:  intelligence gap surfaced explicitly                   │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                                                         │
+│   PROSPECT SCORE FORMULA                                                │
+│                                                                         │
+│   Company Fit ............ 25%   ████████████░░░░░░░░  Size,           │
+│                                                        industry,        │
+│                                                        growth           │
+│                                                                         │
+│   Contact Access ......... 20%   █████████░░░░░░░░░░░  Decision        │
+│                                                        makers,          │
+│                                                        warm paths       │
+│                                                                         │
+│   Opportunity Quality .... 20%   █████████░░░░░░░░░░░  BANT            │
+│                                                        score,           │
+│                                                        pain pts         │
+│                                                                         │
+│   Competitive Position ... 15%   ███████░░░░░░░░░░░░░  Current         │
+│                                                        solutions        │
+│                                                                         │
+│   Outreach Readiness ..... 20%   █████████░░░░░░░░░░░  Channels,       │
+│                                                        messaging        │
+│                                                                         │
+│   Pass 1: website signals only                                          │
+│   Pass 2: agent-enriched (SIGNAL-DATA.json merged)                      │
+│   Delta:  intelligence gap surfaced explicitly                          │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Grade Interpretation
@@ -384,7 +388,7 @@ All 15 universal objections include: a diagnostic tree, pattern interrupt, power
 The orchestrator checks for an ICP file before routing any command. No ICP on file means you get an explicit prompt rather than silently producing output calibrated for nobody.
 
 ### ICP Refinement
-`/sales icp refine` reads all existing prospect files, identifies what your highest and lowest scoring prospects have in common, and produces an updated ICP with a visible before/after diff. Your targeting sharpens with every run.
+`/sales icp refine` reads all existing prospect files, identifies what your highest and lowest scoring prospects have in common, and produces an updated ICP with a visible before/after diff. Your target profile stays sharp over time.
 
 ### Persistent Competitive Memory
 Every `/sales competitors` run reads from and writes back to `COMPETITIVE-LIBRARY.md`. Competitive intelligence compounds across sessions rather than resetting each time.
@@ -607,18 +611,6 @@ AI-SalesForge/
 </td>
 </tr>
 </table>
-
----
-
-## Requirements
-
-| Requirement | Status | Notes |
-|:------------|:------:|:------|
-| **Claude Code** | Required | [Install Claude Code](https://docs.anthropic.com/en/docs/claude-code) |
-| **Python 3.8+** | Optional | For scripts and PDF generation |
-| **reportlab** | Optional | `pip install reportlab` — PDF reports |
-| **beautifulsoup4** | Optional | `pip install beautifulsoup4` — enhanced parsing |
-| **requests** | Optional | `pip install requests` — fallback URL fetching |
 
 ---
 
