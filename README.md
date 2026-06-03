@@ -1,48 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Sales Forge Banner</title>
-
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        background: #050b14;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        font-family: Arial, sans-serif;
-    }
-
-    .banner {
-        width: 100%;
-        max-width: 1400px;
-    }
-
-    .banner img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 12px;
-    }
-</style>
-</head>
-
-<body>
-
-<div class="banner">
-    <img src="ai-sales-forge-banner.png" alt="AI Sales Forge Banner">
-</div>
-
-</body>
-</html>
+<!-- HTML Code for README.md -->
+<p align="center">
+  <img src="repo banner.png" alt="AI Sales Forge - Claude Code Project Banner" width="1000px">
+</p>
 
 > **A full AI-powered sales system running inside Claude Code.**
 > Research any company, score leads with BANT + MEDDIC, map buying committees, generate personalized outreach, handle objections with FBI negotiation tactics, prepare for meetings, and produce professional PDF pipeline reports — all from the command line.
