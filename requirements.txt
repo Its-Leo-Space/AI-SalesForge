@@ -1,0 +1,18 @@
+# AI Sales Forge — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# PDF report generation (/sales report-pdf)
+reportlab>=4.0
+
+# Web scraping for analyze_prospect.py and contact_finder.py
+beautifulsoup4>=4.12
+
+# HTTP requests for URL fetching
+requests>=2.31
+
+# Environment variable management (.env file for email credentials)
+python-dotenv>=1.0
+
+# Email sending via Resend API (optional — only needed for /sales send)
+# resend>=0.7
+# Uncomment the line above if you add the send_sequence.py script
