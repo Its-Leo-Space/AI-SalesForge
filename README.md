@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="repo%20banner.png" alt="AI Sales Forge - Claude Code Banner" width="800">
+  <img src="repo%20banner%281%29.png" alt="AI Sales Forge - Claude Code Features" width="100%">
 </p>
 
 
