@@ -15,16 +15,6 @@ Before you begin, ensure you have the following installed:
 - **Claude Code** — [Install Claude Code](https://docs.anthropic.com/en/docs/claude-code)
 - **Git** — [Download Git](https://git-scm.com/downloads)
 
-### First Command
-
-After installation, open Claude Code and run:
-
-```bash
-/sales quick https://stripe.com
-```
-
-You'll get a 60-second prospect snapshot. Then explore the full command set below.
-
 ---
 
 ## Installation
