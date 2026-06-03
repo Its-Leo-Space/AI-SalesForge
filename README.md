@@ -1,7 +1,7 @@
-
 <p align="center">
-  <img src="repo%20banner%281%29.png" alt="AI Sales Forge - Claude Code Features" width="800">
+  <img src="repo%20banner%281%29.png" alt="AI Sales Forge - Claude Code Features" width="100%">
 </p>
+
 
 
 > **A full AI-powered sales system running inside Claude Code.**
