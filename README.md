@@ -52,19 +52,25 @@ Full analysis saved to PROSPECT-ANALYSIS.md
 
 ## Quick Start
 
-### One-Command Install
+Prerequisites: Make sure you have Claude Code and Git installed before proceeding.
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/Its-Leo-Space/AI-SalesForge/main/install.sh | bash
-```
 
-### Manual Install
+Windows (VS Code Terminal)
+powershellgit clone https://github.com/Its-Leo-Space/AI-SalesForge.git
+cd AI-SalesForge
+bash install.sh
 
-```bash
-git clone https://github.com/Its-Leo-Space/AI-SalesForge.git
+Note: This requires Git Bash to be installed (it comes with Git for Windows). If you get an error on the bash line, open the terminal dropdown in VS Code, select Git Bash as your shell, and run the 3 lines again.
+
+
+Mac / Linux
+One-line install in your terminal:
+bashcurl -fsSL https://raw.githubusercontent.com/Its-Leo-Space/AI-SalesForge/main/install.sh | bash
+
+Or manually:
+bashgit clone https://github.com/Its-Leo-Space/AI-SalesForge.git
 cd AI-SalesForge
 ./install.sh
-```
 
 ### Optional: PDF Reports & Enhanced Parsing
 
