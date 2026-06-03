@@ -1,7 +1,4 @@
-<p align="center">
-  <img src="repo%20banner%281%29.png" alt="AI Sales Forge - Claude Code Features" width="100%">
-</p>
-
+<img src="repo-banner-features.png" alt="AI Sales Forge - Claude Code Features" width="100%">
 
 > **A full AI-powered sales system running inside Claude Code.**
 > Research any company, score leads with BANT + MEDDIC, map buying committees, generate personalized outreach, handle objections with FBI negotiation tactics, prepare for meetings, and produce professional PDF pipeline reports — all from the command line.
