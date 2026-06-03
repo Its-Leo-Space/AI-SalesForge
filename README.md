@@ -3,7 +3,81 @@
 </p>
 
 > **A full AI-powered sales system running inside Claude Code.**
-> Research any company, score leads with BANT + MEDDIC, map buying committees, generate personalized outreach, handle objections with FBI negotiation tactics, prepare for meetings, and produce professional PDF reports.
+> Research any company, score leads with BANT + MEDDIC, map buying committees, generate personalized outreach, handle objections with FBI negotiation tactics, prepare for meetings, and produce professional pipeline reports.
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+- **Claude Code** — [Install Claude Code](https://docs.anthropic.com/en/docs/claude-code)
+- **Git** — [Download Git](https://git-scm.com/downloads)
+
+### First Command
+
+After installation, open Claude Code and run:
+
+```bash
+/sales quick https://stripe.com
+```
+
+You'll get a 60-second prospect snapshot. Then explore the full command set below.
+
+---
+
+## Installation
+
+<table>
+<tr>
+<td width="50%">
+
+#### 🍎 Mac / Linux
+
+**One-line install:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/Its-Leo-Space/AI-SalesForge/main/install.sh | bash
+```
+
+**Or manually:**
+```bash
+git clone https://github.com/Its-Leo-Space/AI-SalesForge.git
+cd AI-SalesForge
+./install.sh
+```
+
+</td>
+<td width="50%">
+
+#### 🪟 Windows (VS Code)
+
+```powershell
+git clone https://github.com/Its-Leo-Space/AI-SalesForge.git
+cd AI-SalesForge
+bash install.sh
+```
+
+> **Note:** Requires Git Bash (included with Git for Windows). If bash fails, switch your VS Code terminal to Git Bash via the dropdown menu.
+
+</td>
+</tr>
+</table>
+
+---
+
+## Optional: PDF Reports & Enhanced Parsing
+
+For advanced features (PDF generation, better HTML parsing, robust URL fetching):
+
+```bash
+pip install -r requirements.txt
+```
+
+This installs:
+- **reportlab** — PDF report generation
+- **beautifulsoup4** — Enhanced HTML parsing
+- **requests** — Fallback URL fetching
 
 ---
 
@@ -49,71 +123,7 @@ Full analysis saved to PROSPECT-ANALYSIS.md
 
 ---
 
-## 🚀 Quick Start
-
-### Prerequisites
-
-Before you begin, ensure you have the following installed:
-- **Claude Code** — [Install Claude Code](https://docs.anthropic.com/en/docs/claude-code)
-- **Git** — [Download Git](https://git-scm.com/downloads)
-
----
-
-### Installation
-
-<table>
-<tr>
-<td width="50%">
-
-#### 🍎 Mac / Linux
-
-**One-line install:**
-```bash
-curl -fsSL https://raw.githubusercontent.com/Its-Leo-Space/AI-SalesForge/main/install.sh | bash
-```
-
-**Or manually:**
-```bash
-git clone https://github.com/Its-Leo-Space/AI-SalesForge.git
-cd AI-SalesForge
-./install.sh
-```
-
-</td>
-<td width="50%">
-
-#### 🪟 Windows (VS Code)
-
-```powershell
-git clone https://github.com/Its-Leo-Space/AI-SalesForge.git
-cd AI-SalesForge
-bash install.sh
-```
-
-> **Note:** Requires Git Bash (included with Git for Windows). If bash fails, switch your VS Code terminal to Git Bash via the dropdown menu.
-
-</td>
-</tr>
-</table>
-
----
-
-### Optional: PDF Reports & Enhanced Parsing
-
-For advanced features (PDF generation, better HTML parsing, robust URL fetching):
-
-```bash
-pip install -r requirements.txt
-```
-
-This installs:
-- **reportlab** — PDF report generation
-- **beautifulsoup4** — Enhanced HTML parsing
-- **requests** — Fallback URL fetching
-
----
-
-### What Gets Installed
+## What Gets Installed
 
 <details>
 <summary><strong>📦 Click to expand installer details</strong></summary>
@@ -170,43 +180,7 @@ Installing templates...
 
 ---
 
-### First Command
-
-After installation, open Claude Code and try:
-
-```bash
-/sales quick https://stripe.com
-```
-
-You'll get a 60-second prospect snapshot. Then explore the full command set below.
-
----
-
-## Commands
-
-| Command | Description | Output |
-|:--------|:------------|:-------|
-| `/sales prospect <url>` | Full prospect audit — **5 parallel agents** | `PROSPECT-ANALYSIS.md` |
-| `/sales quick <url>` | 60-second prospect snapshot | Terminal output |
-| `/sales research <url>` | Company research & firmographics | `COMPANY-RESEARCH.md` |
-| `/sales qualify <url>` | BANT + MEDDIC lead scoring | `LEAD-QUALIFICATION.md` |
-| `/sales contacts <url>` | Decision maker identification | `DECISION-MAKERS.md` |
-| `/sales outreach <prospect>` | Cold outreach email sequence | `OUTREACH-SEQUENCE.md` |
-| `/sales followup <prospect>` | Follow-up sequence (anchored to meeting prep) | `FOLLOWUP-SEQUENCE.md` |
-| `/sales prep <url>` | Meeting preparation brief | `MEETING-PREP.md` |
-| `/sales proposal <client>` | Client proposal with ROI benchmarks | `CLIENT-PROPOSAL.md` |
-| `/sales objections <topic>` | Objection handling — LQS / MIC / AAR / FCA | `OBJECTION-PLAYBOOK.md` |
-| `/sales icp <description>` | Ideal Customer Profile builder | `IDEAL-CUSTOMER-PROFILE.md` |
-| `/sales icp refine` | Refine ICP from existing prospect files | `IDEAL-CUSTOMER-PROFILE.md` |
-| `/sales competitors <url>` | Competitive intelligence (persistent library) | `COMPETITIVE-INTEL.md` |
-| `/sales report` | Pipeline report (reads outreach logs) | `SALES-REPORT.md` |
-| `/sales report-pdf` | Pipeline report (PDF) | `SALES-REPORT-*.pdf` |
-
----
-
-## How It Works
-
-### Architecture
+## System Architecture
 
 The system uses a three-layer architecture — one orchestrator skill routes commands to 13 sub-skills, with the flagship `/sales prospect` command launching 5 specialized agents in parallel:
 
@@ -278,9 +252,31 @@ Skills automatically detect and build on each other's output — nothing is gene
                          (persists across all runs)
                                │
                                ▼
-                    next /sales prospect reads
-                    prior competitive intel
+                     next /sales prospect reads
+                     prior competitive intel
 ```
+
+---
+
+## Commands
+
+| Command | Description | Output |
+|:--------|:------------|:-------|
+| `/sales prospect <url>` | Full prospect audit — **5 parallel agents** | `PROSPECT-ANALYSIS.md` |
+| `/sales quick <url>` | 60-second prospect snapshot | Terminal output |
+| `/sales research <url>` | Company research & firmographics | `COMPANY-RESEARCH.md` |
+| `/sales qualify <url>` | BANT + MEDDIC lead scoring | `LEAD-QUALIFICATION.md` |
+| `/sales contacts <url>` | Decision maker identification | `DECISION-MAKERS.md` |
+| `/sales outreach <prospect>` | Cold outreach email sequence | `OUTREACH-SEQUENCE.md` |
+| `/sales followup <prospect>` | Follow-up sequence (anchored to meeting prep) | `FOLLOWUP-SEQUENCE.md` |
+| `/sales prep <url>` | Meeting preparation brief | `MEETING-PREP.md` |
+| `/sales proposal <client>` | Client proposal with ROI benchmarks | `CLIENT-PROPOSAL.md` |
+| `/sales objections <topic>` | Objection handling — LQS / MIC / AAR / FCA | `OBJECTION-PLAYBOOK.md` |
+| `/sales icp <description>` | Ideal Customer Profile builder | `IDEAL-CUSTOMER-PROFILE.md` |
+| `/sales icp refine` | Refine ICP from existing prospect files | `IDEAL-CUSTOMER-PROFILE.md` |
+| `/sales competitors <url>` | Competitive intelligence (persistent library) | `COMPETITIVE-INTEL.md` |
+| `/sales report` | Pipeline report (reads outreach logs) | `SALES-REPORT.md` |
+| `/sales report-pdf` | Pipeline report (PDF) | `SALES-REPORT-*.pdf` |
 
 ---
 
@@ -398,7 +394,7 @@ All 15 universal objections include: a diagnostic tree, pattern interrupt, power
 The orchestrator checks for an ICP file before routing any command. No ICP on file means you get an explicit prompt rather than silently producing output calibrated for nobody.
 
 ### ICP Refinement
-`/sales icp refine` reads all existing prospect files, identifies what your highest and lowest scoring prospects have in common, and produces an updated ICP with a visible before/after diff. Your targeting gets sharper over time.
+`/sales icp refine` reads all existing prospect files, identifies what your highest and lowest scoring prospects have in common, and produces an updated ICP with a visible before/after diff. Your targeting sharpens with every run.
 
 ### Persistent Competitive Memory
 Every `/sales competitors` run reads from and writes back to `COMPETITIVE-LIBRARY.md`. Competitive intelligence compounds across sessions rather than resetting each time.
