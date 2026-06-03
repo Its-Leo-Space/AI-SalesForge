@@ -1,10 +1,9 @@
-<!-- HTML Code for README.md -->
 <p align="center">
   <img src="repo banner.png" alt="AI Sales Forge - Claude Code Project Banner" width="1000px">
 </p>
 
 > **A full AI-powered sales system running inside Claude Code.**
-> Research any company, score leads with BANT + MEDDIC, map buying committees, generate personalized outreach, handle objections with FBI negotiation tactics, prepare for meetings, and produce professional PDF pipeline reports — all from the command line.
+> Research any company, score leads with BANT + MEDDIC, map buying committees, generate personalized outreach, handle objections with FBI negotiation tactics, prepare for meetings, and produce professional PDF reports.
 
 ---
 
@@ -50,36 +49,74 @@ Full analysis saved to PROSPECT-ANALYSIS.md
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
-Prerequisites: Make sure you have Claude Code and Git installed before proceeding.
+### Prerequisites
 
+Before you begin, ensure you have the following installed:
+- **Claude Code** — [Install Claude Code](https://docs.anthropic.com/en/docs/claude-code)
+- **Git** — [Download Git](https://git-scm.com/downloads)
 
-Windows (VS Code Terminal)
-powershellgit clone https://github.com/Its-Leo-Space/AI-SalesForge.git
-cd AI-SalesForge
-bash install.sh
+---
 
-Note: This requires Git Bash to be installed (it comes with Git for Windows). If you get an error on the bash line, open the terminal dropdown in VS Code, select Git Bash as your shell, and run the 3 lines again.
+### Installation
 
+<table>
+<tr>
+<td width="50%">
 
-Mac / Linux
-One-line install in your terminal:
-bashcurl -fsSL https://raw.githubusercontent.com/Its-Leo-Space/AI-SalesForge/main/install.sh | bash
+#### 🍎 Mac / Linux
 
-Or manually:
-bashgit clone https://github.com/Its-Leo-Space/AI-SalesForge.git
+**One-line install:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/Its-Leo-Space/AI-SalesForge/main/install.sh | bash
+```
+
+**Or manually:**
+```bash
+git clone https://github.com/Its-Leo-Space/AI-SalesForge.git
 cd AI-SalesForge
 ./install.sh
+```
+
+</td>
+<td width="50%">
+
+#### 🪟 Windows (VS Code)
+
+```powershell
+git clone https://github.com/Its-Leo-Space/AI-SalesForge.git
+cd AI-SalesForge
+bash install.sh
+```
+
+> **Note:** Requires Git Bash (included with Git for Windows). If bash fails, switch your VS Code terminal to Git Bash via the dropdown menu.
+
+</td>
+</tr>
+</table>
+
+---
 
 ### Optional: PDF Reports & Enhanced Parsing
+
+For advanced features (PDF generation, better HTML parsing, robust URL fetching):
 
 ```bash
 pip install -r requirements.txt
 ```
 
+This installs:
+- **reportlab** — PDF report generation
+- **beautifulsoup4** — Enhanced HTML parsing
+- **requests** — Fallback URL fetching
+
+---
+
+### What Gets Installed
+
 <details>
-<summary><strong>What the installer does</strong></summary>
+<summary><strong>📦 Click to expand installer details</strong></summary>
 
 ```
 ╔══════════════════════════════════════════════════════════╗
@@ -130,6 +167,18 @@ Installing templates...
 ```
 
 </details>
+
+---
+
+### First Command
+
+After installation, open Claude Code and try:
+
+```bash
+/sales quick https://stripe.com
+```
+
+You'll get a 60-second prospect snapshot. Then explore the full command set below.
 
 ---
 
@@ -240,34 +289,33 @@ Skills automatically detect and build on each other's output — nothing is gene
 Every prospect gets a **weighted composite score (0-100)** calculated across 5 dimensions, with two scoring passes to measure how much the agents added beyond raw website data:
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                                                                     │
-│   PROSPECT SCORE FORMULA                                            │
-│                                                                     │
-│   Company Fit ............ 25%   ████████████░░░░░░░░  Size,        │
-│                                                        industry,    │
-│                                                        growth       │
-│                                                                     │
-│   Contact Access ......... 20%   █████████░░░░░░░░░░░  Decision     │
-│                                                        makers,      │
-│                                                        warm paths   │
-│                                                                     │
-│   Opportunity Quality .... 20%   █████████░░░░░░░░░░░  BANT score,  │
-│                                                        pain points  │
-│                                                                     │
-│   Competitive Position ... 15%   ███████░░░░░░░░░░░░░  Current      │
-│                                                        solutions,   │
-│                                                        switching    │
-│                                                                     │
-│   Outreach Readiness ..... 20%   █████████░░░░░░░░░░░  Channels,    │
-│                                                        messaging,   │
-│                                                        anchors      │
-│                                                                     │
-│   Pass 1: website signals only                                      │
-│   Pass 2: agent-enriched (SIGNAL-DATA.json merged)                  │
-│   Delta:  intelligence gap surfaced explicitly                      │
-│                                                                     │
-└─────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                  │
+│   PROSPECT SCORE FORMULA                                         │
+│                                                                  │
+│   Company Fit ............ 25%   ████████████░░░░░░░░  Size,     │
+│                                                        industry,  │
+│                                                        growth     │
+│                                                                  │
+│   Contact Access ......... 20%   █████████░░░░░░░░░░░  Decision  │
+│                                                        makers,    │
+│                                                        warm paths │
+│                                                                  │
+│   Opportunity Quality .... 20%   █████████░░░░░░░░░░░  BANT      │
+│                                                        score,     │
+│                                                        pain pts   │
+│                                                                  │
+│   Competitive Position ... 15%   ███████░░░░░░░░░░░░░  Current   │
+│                                                        solutions  │
+│                                                                  │
+│   Outreach Readiness ..... 20%   █████████░░░░░░░░░░░  Channels, │
+│                                                        messaging  │
+│                                                                  │
+│   Pass 1: website signals only                                   │
+│   Pass 2: agent-enriched (SIGNAL-DATA.json merged)               │
+│   Delta:  intelligence gap surfaced explicitly                   │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ### Grade Interpretation
@@ -350,19 +398,19 @@ All 15 universal objections include: a diagnostic tree, pattern interrupt, power
 The orchestrator checks for an ICP file before routing any command. No ICP on file means you get an explicit prompt rather than silently producing output calibrated for nobody.
 
 ### ICP Refinement
-`/sales icp refine` reads all existing prospect files, identifies what your highest and lowest scoring prospects have in common, and produces an updated ICP with a visible before/after diff. Your targeting sharpens automatically as your pipeline grows.
+`/sales icp refine` reads all existing prospect files, identifies what your highest and lowest scoring prospects have in common, and produces an updated ICP with a visible before/after diff. Your targeting gets sharper over time.
 
 ### Persistent Competitive Memory
 Every `/sales competitors` run reads from and writes back to `COMPETITIVE-LIBRARY.md`. Competitive intelligence compounds across sessions rather than resetting each time.
 
 ### Data Quality Gate
-The strategy agent assesses incoming data quality before writing a single word of outreach. Low contact data triggers a research checklist. Unconfirmed needs shift the framework to hypothesis mode. Poor company fit caps the score and surfaces a warning.
+The strategy agent assesses incoming data quality before writing a single word of outreach. Low contact data triggers a research checklist. Unconfirmed needs shift the framework to hypothesis mode.
 
 ### ROI-Honest Proposals
 `/sales proposal` reads `ROI-BENCHMARKS.md` and either cites real evidence or flags estimates with `⚠️`. No invented numbers.
 
 ### Market Context Awareness
-`MARKET-CONTEXT.md` feeds into both the prospect and competitive agents — local tool signatures, relationship norms, and regional funding signals pass through to every analysis that touches geography or buying behaviour.
+`MARKET-CONTEXT.md` feeds into both the prospect and competitive agents — local tool signatures, relationship norms, and regional funding signals pass through to every analysis.
 
 ---
 
